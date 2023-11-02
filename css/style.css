@@ -1,0 +1,19 @@
+header {
+    background-color: #FDFAF5;
+    height: 120px;
+}
+
+.main-header {
+    padding: 10px 0px 10px 0px;
+
+}
+
+.logo {
+    height: 100px;
+    width: 300px;
+}
+
+.hi {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
