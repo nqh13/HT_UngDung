@@ -73,8 +73,8 @@ aside {
 
 
 footer {
-    height: 300px;
-    background-color: #FDFAF5;
+    height: max-content;
+    background-color: #c59d6b;
     text-align: center;
 }
 
@@ -119,10 +119,16 @@ li {
 
 .social {
     margin: 20px 10px;
+    color: black;
 }
 
 .nav-link {
     color: black;
+}
+
+a {
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 
@@ -150,6 +156,57 @@ li {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+}
+
+.detail-img {
+    /* margin-left: 50px; */
+    height: 450px;
+    width: 450px;
+}
+
+.detail-content {
+    width: 400px;
+    border-bottom: black solid 1px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.quality {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
 
 
+}
+
+.items-count {
+    width: 40px;
+    height: 40px;
+
+}
+
+.input-text {
+    text-align: center;
+    width: 150px;
+}
+
+.box-qty {
+    margin-left: 15px;
+}
+
+.btn-add {
+    font-size: 15px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #C59D6B;
+    color: white;
+    border-color: #C59D6B;
+}
+
+.btn-add:hover {
+    background-color: #FFFFFF;
+    color: #C59D6B;
 }
