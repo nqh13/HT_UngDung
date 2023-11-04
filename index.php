@@ -30,6 +30,7 @@
 
         }else{
           include('views/'.$_GET['page'].'/index.php');
+          $controller = new Food_Controller();
         }
       ?>
     <!-- </div> -->

@@ -9,11 +9,7 @@ class Food_Controller {
     }
 
     public function index() {
-        // Lấy danh sách tất cả các món ăn từ Model
-        $foods = $this->model->getAllFoods();
-
-        // Hiển thị View với danh sách món ăn
-        require 'views/food.php';
+        return $foods = $this->model->getAllFoods();
     }
 
     public function add() {
@@ -67,18 +63,18 @@ class Food_Controller {
 }
 
 // Khởi tạo đối tượng Controller và xử lý yêu cầu từ người dùng
-$controller = new Food_Controller();
+// $controller = new Food_Controller();
 
-if (isset($_GET['action'])) {
-    $action = $_GET['action'];
-    if ($action === 'add') {
-        $controller->add();
-    } elseif ($action === 'edit') {
-        $controller->edit();
-    } elseif ($action === 'delete') {
-        $controller->delete();
-    }
-} else {
-    $controller->index();
-}
-?>
+// if (isset($_GET['action'])) {
+//     $action = $_GET['action'];
+//     if ($action === 'add') {
+//         $controller->add();
+//     } elseif ($action === 'edit') {
+//         $controller->edit();
+//     } elseif ($action === 'delete') {
+//         $controller->delete();
+//     }
+// } else {
+//     $controller->index();
+// }
+// ?>

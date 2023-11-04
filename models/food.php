@@ -1,35 +1,44 @@
 <?php
-class Food_Model {
+require_once 'configs/database.php';
+class Food_Model extends Database
+{
     private $db;
 
-    public function __construct() {
-        // Kết nối cơ sở dữ liệu
-        $this->db = new PDO('mysql:host=localhost;dbname=food', 'root', '');
+    public function __construct()
+    {
+        parent::__construct('localhost', 'htbepan', 'root', '');
+        parent::connect();
     }
 
-    public function addFood($name, $description) {
+    public function addFood($name, $description, $image)
+    {
         // Thêm một món ăn vào cơ sở dữ liệu
-        $stmt = $this->db->prepare("INSERT INTO foods (name, description) VALUES (?, ?)");
-        $stmt->execute([$name, $description]);
+        $sql = "INSERT INTO monan (ten_mon_an, mo_ta, hinh_anh) VALUES (?, ?, ?)";
+        $stmt = $this->prepare($sql);
+        $stmt->execute([$name, $description, $image]);
     }
 
-    public function updateFood($id, $name, $description) {
+    public function updateFood($id, $name, $description, $image)
+    {
         // Cập nhật thông tin một món ăn trong cơ sở dữ liệu
-        $stmt = $this->db->prepare("UPDATE foods SET name = ?, description = ? WHERE id = ?");
-        $stmt->execute([$name, $description, $id]);
+        $sql = "UPDATE monan SET ten_mon_an = ?, mo_ta = ?, hinh_anh = ? WHERE id = ?";
+        $stmt = $this->prepare($sql);
+        $stmt->execute([$name, $description, $image, $id]);
     }
 
-    public function deleteFood($id) {
+    public function deleteFood($id)
+    {
         // Xóa một món ăn khỏi cơ sở dữ liệu
-        $stmt = $this->db->prepare("DELETE FROM foods WHERE id = ?");
+        $sql = "DELETE FROM monan WHERE id = ?";
+        $stmt = $this->prepare($sql);
         $stmt->execute([$id]);
     }
 
-    public function getAllFoods() {
+    public function getAllFoods()
+    {
         // Lấy danh sách tất cả các món ăn
-        $stmt = $this->db->prepare("SELECT * FROM foods");
-        $stmt->execute();
+        $sql = "SELECT * FROM monan";
+        $stmt = $this->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-?>
