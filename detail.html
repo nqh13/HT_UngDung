@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+
+  <body class="dark bg-gray-800">
+    <div
+      class="max-w-screen-xl mx-auto bg-transparent flex justify-between items-center p-2 flex-wrap"
+    >
+      <span class="text-sm font-extrabold text-[#ff9900] max-[480px]:hidden"
+        >Chào mừng bạn đến với bếp ăn của tập đoàn</span
+      >
+      <span class="text-sm font-extrabold text-[#ff9900]"
+        >Open: 10AM - 17PM</span
+      >
+    </div>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 py-2"
+      >
+        <a href="#" class="flex items-center">
+          <img
+            src="img/LOGO-01.png"
+            class="h-14 mr-3 w-full"
+            alt="Flowbite Logo"
+          />
+        </a>
+        <div class="flex items-center md:order-2">
+          <a href="/cart" class="text-gray-100 mr-4">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <button
+            type="button"
+            class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            id="user-menu-button"
+            aria-expanded="false"
+            data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom"
+          >
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="w-8 h-8 rounded-full"
+              src="/img/suachua.jpg"
+              alt="user photo"
+            />
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+            id="user-dropdown"
+          >
+            <div class="px-4 py-3">
+              <span class="block text-sm text-gray-900 dark:text-white"
+                >Bonnie Green</span
+              >
+              <span
+                class="block text-sm text-gray-500 truncate dark:text-gray-400"
+                >name@flowbite.com</span
+              >
+            </div>
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Settings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Earnings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            data-collapse-toggle="navbar-user"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-user"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-user"
+        >
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Thực đơn</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Giới thiệu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Liên hệ</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 px-2">
+      <div class="col-span-1 py-4">
+        <div>
+          <div class="bg-[#ff9900] p-2 rounded-md">
+            <h2 class="text-base text-white font-bold">
+              <i class="fa-solid fa-bars fa-xl"></i> Danh mục sản phẩm
+            </h2>
+          </div>
+          <ul class="p-4">
+            <li class="border-b-2 border-gray-500 py-2">
+              <a
+                href="#"
+                class="text-gray-300 font-semibold hover:text-gray-600"
+                >Món chính</a
+              >
+            </li>
+            <li class="border-b-2 border-gray-500 py-2">
+              <a
+                href="#"
+                class="text-gray-300 font-semibold hover:text-gray-600"
+                >Canh</a
+              >
+            </li>
+            <li class="border-b-2 border-gray-500 py-2">
+              <a
+                href="#"
+                class="text-gray-300 font-semibold hover:text-gray-600"
+                >Món mới</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="bg-[#ff9900] p-2 rounded-md">
+            <h2 class="text-base text-white font-bold">
+              <i class="fa-solid fa-check-square fa-xl"></i> CÓ THỂ BẠN SẼ THÍCH
+            </h2>
+          </div>
+          <ul class="p-4">
+            <li class="p-2 hover:bg-gray-600 rounded-md">
+              <a href="#" class="text-gray-300 font-semibold flex items-center">
+                <img
+                  src="./img/thit-heo-kho-tieu.jpg"
+                  class="w-20 h-14 mr-2 rounded-md"
+                  alt=""
+                />
+                <div>
+                  <p>Thit heo kho tieu</p>
+                  <span class="text-gray-500 line-through text-[12px]"
+                    >10.000.000</span
+                  >
+                  <span class="text-red-500 text-[16px]">10.000.000 vnđ</span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2 hover:bg-gray-600 rounded-md">
+              <a href="#" class="text-gray-300 font-semibold flex items-center">
+                <img
+                  src="./img/thit-heo-kho-tieu.jpg"
+                  class="w-20 h-14 mr-2 rounded-md"
+                  alt=""
+                />
+                <div>
+                  <p>Thit heo kho tieu</p>
+                  <span class="text-gray-500 line-through text-[12px]"
+                    >10.000.000</span
+                  >
+                  <span class="text-red-500 text-[16px]">10.000.000 vnđ</span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2 hover:bg-gray-600 rounded-md">
+              <a href="#" class="text-gray-300 font-semibold flex items-center">
+                <img
+                  src="./img/thit-heo-kho-tieu.jpg"
+                  class="w-20 h-14 mr-2 rounded-md"
+                  alt=""
+                />
+                <div>
+                  <p>Thit heo kho tieu</p>
+                  <span class="text-gray-500 line-through text-[12px]"
+                    >10.000.000</span
+                  >
+                  <span class="text-red-500 text-[16px]">10.000.000 vnđ</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- detail -->
+      <section
+        class="py-10 px-2 font-poppins dark:bg-gray-800 col-span-3 border-gray-500 border-l-2"
+      >
+        <div class="max-w-3xl px-4 mx-auto">
+          <div class="flex flex-wrap mb-24 -mx-4">
+            <div class="w-full px-4 mb-8 md:w-2/3 md:mb-0">
+              <img
+                class="object-contain w-full lg:h-full"
+                src="./img/canhchua.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full px-4 md:w-1/3">
+              <div class="mb-6">
+                <span
+                  class="px-2.5 py-0.5 text-xs text-blue-600 bg-blue-100 dark:bg-gray-700 rounded-xl dark:text-gray-200"
+                  >New Arrival</span
+                >
+                <h2
+                  class="max-w-xl mt-6 mb-6 text-xl font-semibold leading-loose tracking-wide text-gray-700 md:text-2xl dark:text-gray-300"
+                >
+                  Thit heo kho tieu
+                </h2>
+                <div class="flex flex-wrap items-center mb-6">
+                  <ul class="flex mb-4 mr-2 lg:mb-0">
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="w-4 mr-1 text-red-500 dark:text-gray-400 bi bi-star"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="w-4 mr-1 text-red-500 dark:text-gray-400 bi bi-star"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="w-4 mr-1 text-red-500 dark:text-gray-400 bi bi-star"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="w-4 mr-1 text-red-500 dark:text-gray-400 bi bi-star"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <p
+                  class="inline-block text-2xl font-semibold text-gray-700 dark:text-gray-400"
+                >
+                  <span>30,000 vnđ</span>
+                  <span
+                    class="ml-3 text-base font-normal text-gray-500 line-through dark:text-gray-400"
+                    >40,000 vnđ</span
+                  >
+                </p>
+              </div>
+              <div class="flex flex-wrap items-center mb-6 gap-3">
+                <div class="mb-4 mr-4 lg:mb-0">
+                  <div class="w-28">
+                    <div
+                      class="relative flex flex-row w-full h-10 bg-transparent rounded-lg"
+                    >
+                      <button
+                        class="w-20 h-full text-gray-600 bg-gray-100 border-r rounded-l outline-none cursor-pointer dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 hover:text-gray-700 dark:bg-gray-900 hover:bg-gray-300"
+                      >
+                        <span class="m-auto text-2xl font-thin">-</span>
+                      </button>
+                      <input
+                        type="number"
+                        class="flex items-center w-full font-semibold text-center text-gray-700 placeholder-gray-700 bg-gray-100 outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-900 focus:outline-none text-md hover:text-black"
+                        placeholder="1"
+                      />
+                      <button
+                        class="w-20 h-full text-gray-600 bg-gray-100 border-l rounded-r outline-none cursor-pointer dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:bg-gray-900 hover:text-gray-700 hover:bg-gray-300"
+                      >
+                        <span class="m-auto text-2xl font-thin">+</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4 lg:mb-0">
+                  <button
+                    class="flex items-center justify-center w-full h-10 p-2 mr-4 text-gray-700 border border-gray-300 lg:w-11 hover:text-gray-50 dark:text-gray-200 dark:border-blue-600 hover:bg-blue-600 hover:border-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 dark:hover:border-blue-500 dark:hover:text-gray-100"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-heart"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <button
+                  class="w-full whitespace-nowrap px-4 py-3 text-center text-blue-600 bg-blue-100 border border-blue-600 hover:bg-gray-600 active:scale-90 rounded-xl"
+                >
+                  <i class="fas fa-shopping-cart mr-2"></i>
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t-2 border-gray-200">
+          <div class="border-b border-gray-200 dark:border-gray-700">
+            <ul
+              class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400"
+            >
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
+                >
+                  Mô tả
+                </a>
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group"
+                  aria-current="page"
+                >
+                  Đánh giá
+                </a>
+              </li>
+            </ul>
+            <div>
+              <div
+                class="flex flex-wrap -mb-px text-sm font-medium text-gray-400"
+              >
+                <div class="mt-2 flex gap-x-2">
+                  <img
+                    src="./img/comtam.jpg"
+                    alt=""
+                    class="w-14 h-14 rounded-full"
+                  />
+                  <div>
+                    <p class="text-gray-400 font-bold">Phần Thị Mỹ Diễng</p>
+                    <p><i class="fa-regular fa-clock"></i> 1h</p>
+                    <p class="text-gray-400 text-sm font-thin">Ngon</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <p class="text-xl font-bold text-gray-200">Đánh giá của bạn*</p>
+                <form action="" class="mt-4 flex flex-col gap-2">
+                  <textarea name="" id="" class="w-full h-32"></textarea>
+                  <div class="flex gap-2">
+                    <div class="w-1/2">
+                      <label for="name" class="text-gray-300">Tên *</label>
+                      <input type="text" id="name" class="w-full" />
+                    </div>
+                    <div class="w-1/2">
+                      <label for="email" class="text-gray-300">Email *</label>
+                      <input type="email" id="email" class="w-full" />
+                    </div>
+                  </div>
+                  <label for="checkbox" class="text-gray-200">
+                    <input type="checkbox" id="checkbox" />
+                    Lưu tên của tôi, email, và trang web trong trình duyệt này
+                    cho lần bình luận kế tiếp của tôi.
+                  </label>
+                  <button
+                    type="button"
+                    class="bg-blue-500 text-white w-fit px-4 py-2 rounded-md hover:text-gray-700"
+                  >
+                    Gửi đi
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end detail -->
+    </div>
+
+    <footer class="bg-white dark:bg-gray-900 mt-10 shadow-blue-500\/50">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-1 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Thông tin thành viên
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Phùng Thị Mỹ Diệu</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Hoàng Tuấn Anh</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Phan Võ Minh Thịnh</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Nguyễn Lê Ngọc Dương</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Nguyễn Quang Hà</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Điều khoản
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Chính sách bảo mật</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Hướng dẫn đặt món</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">Hướng dẫ thanh toán</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Đăng ký nhận tin
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400 font-medium mb-4">
+              Đăng ký để nhận những ưu đãi hấp dẫn từ chúng tôi
+            </p>
+            <form action="" class="flex justify-start items-center">
+              <input
+                type="text"
+                placeholder="Email"
+                class="px-4 py-2 mr-2 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              />
+              <button
+                type="submit"
+                class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+              >
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <ul
+              class="flex mt-4 justify-start gap-4 items-center text-gray-400"
+            >
+              <li class="hover:text-blue-500">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+              </li>
+              <li class="hover:text-red-500">
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+              </li>
+              <li class="hover:text-pink-500">
+                <i class="fa-brands fa-tiktok fa-2xl"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-col gap-y-3">
+          <h3
+            class="text-xl font-semibold text-gray-900 uppercase dark:text-white"
+          >
+            Bếp ăn tập đoàn
+          </h3>
+          <p class="text-gray-500 dark:text-gray-400 font-medium">
+            Địa chỉ: 12 Nguyễn Văn Bảo, TP. HCM
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 font-medium">
+            Điện thoại: 0123456789
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 font-medium">
+            Email: nguyenquangha@gmail.com
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+  </body>
+</html>
